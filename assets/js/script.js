@@ -1,13 +1,13 @@
 var generateButton = document.querySelector("#generate");
 var displayEl = document.querySelector("#dog-img");
-var jokeEl = document.querySelector("#joke");
+var factEl = document.querySelector("#joke");
 
 // fetch to pull up random dog image
 var getDogImg = function (){
-    fetch("https://dog.ceo/api/breeds/image/random")
+    fetch("https://api.thecatapi.com/v1/images/search")
         .then(function(response){
             response.json().then(function(data){
-                var imgLink = data.message;
+                var imgLink = data[0].url;
                 displayImage(imgLink);
              });
         });
@@ -20,24 +20,24 @@ var displayImage = function(link) {
     displayEl.appendChild(image);
 };
 
-// fetch to get random joke
-var getJoke = function(){
-    fetch("http://api.icndb.com/jokes/random")
+// fetch to get random fact
+var getFact = function(){
+    fetch("https://catfact.ninja/fact")
         .then(function(response){
             response.json().then(function(data){
-                var jokeContent = data.value.joke;
-                displayJoke(jokeContent);
+                var factContent = data.fact;
+                displayFact(factContent);
             });
         });
 };
 
-// display joke to page
-var displayJoke = function(joke){
-    var jokeText = document.createElement("p");
-    jokeText.textContent = joke;
-    jokeEl.appendChild(jokeText);
+// display fact to page
+var displayFact = function(fact){
+    var factText = document.createElement("p");
+    factText.textContent = fact;
+    factEl.appendChild(factText);
 };
 
 // display when page is loaded
 getDogImg();
-getJoke();
+getFact();
