@@ -1,9 +1,9 @@
 var generateButton = document.querySelector("#generate");
-var displayEl = document.querySelector("#dog-img");
-var factEl = document.querySelector("#joke");
+var displayEl = document.querySelector("#cat-img");
+var factEl = document.querySelector("#cat-fact");
 
 // fetch to pull up random dog image
-var getDogImg = function (){
+var getCatImg = function (){
     fetch("https://api.thecatapi.com/v1/images/search")
         .then(function(response){
             response.json().then(function(data){
@@ -17,6 +17,7 @@ var getDogImg = function (){
 var displayImage = function(link) {
     var image = document.createElement("img");
     image.setAttribute("src", link);
+    image.setAttribute("id", "image");
     displayEl.appendChild(image);
 };
 
@@ -39,5 +40,5 @@ var displayFact = function(fact){
 };
 
 // display when page is loaded
-getDogImg();
+getCatImg();
 getFact();
