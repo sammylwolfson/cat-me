@@ -3,6 +3,7 @@ var displayEl = document.querySelector("#cat-img");
 var factEl = document.querySelector("#cat-fact");
 var favPhotoBtn = document.querySelector("#favorite-kitty")
 var favFactBtn = document.querySelector("#favorite-fact")
+var againBtn = document.querySelector("#again-btn")
 
 // fetch to pull up random dog image
 var getCatImg = function (){
@@ -85,3 +86,6 @@ var saveFact = function(){
 }
 favPhotoBtn.addEventListener('click', savePhoto)
 favFactBtn.addEventListener('click', saveFact)
+againBtn.addEventListener('click', function(){
+    location.reload();
+})
