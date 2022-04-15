@@ -1,0 +1,22 @@
+#cat-img {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+#cat-fact {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+#cat-fact p {
+    text-align: center;
+    font-size: 30px;
+    padding: 50px;
+}
+
