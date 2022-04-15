@@ -1,14 +1,13 @@
 var generateButton = document.querySelector("#generate");
-var displayEl = document.querySelector("#dog-img");
-var jokeEl = document.querySelector("#joke");
-var savekittyphotoEl = document.querySelector('#favorite-Kitty');
+var displayEl = document.querySelector("#cat-img");
+var factEl = document.querySelector("#cat-fact");
 
 // fetch to pull up random dog image
-var getDogImg = function (){
-    fetch("https://dog.ceo/api/breeds/image/random")
+var getCatImg = function (){
+    fetch("https://api.thecatapi.com/v1/images/search")
         .then(function(response){
             response.json().then(function(data){
-                var imgLink = data.message;
+                var imgLink = data[0].url;
                 displayImage(imgLink);
              });
         });
@@ -18,45 +17,28 @@ var getDogImg = function (){
 var displayImage = function(link) {
     var image = document.createElement("img");
     image.setAttribute("src", link);
+    image.setAttribute("id", "image");
     displayEl.appendChild(image);
 };
 
-// fetch to get random joke
-var getJoke = function(){
-    fetch("http://api.icndb.com/jokes/random")
+// fetch to get random fact
+var getFact = function(){
+    fetch("https://catfact.ninja/fact")
         .then(function(response){
             response.json().then(function(data){
-                var jokeContent = data.value.joke;
-                displayJoke(jokeContent);
+                var factContent = data.fact;
+                displayFact(factContent);
             });
         });
 };
 
-// display joke to page
-var displayJoke = function(joke){
-    var jokeText = document.createElement("p");
-    jokeText.textContent = joke;
-    jokeEl.appendChild(jokeText);
+// display fact to page
+var displayFact = function(fact){
+    var factText = document.createElement("p");
+    factText.textContent = fact;
+    factEl.appendChild(factText);
 };
 
-var savephoto = function(){
-    var imageURL = document.querySelector('#image')
-    
-    var imageSRC = imageURL.getAttribute('src')
-    var savedphotos = JSON.parse(localStorage.getItem('savedphotos'))
-    if (!savedphotos){
-        savedphotos = {
-            src: []
-        }
-        var savedSRC = savedphotos.src
-        savedSRC.push(imageSRC)
-    } else {
-        savedphotos.src.push(imageSRC)
-    }
-    localStorage.setItem('savedphotos', JSON.stringify(savedphotos))
-}
-
-savekittyphotoEl.addEventListener("click", savephoto)
 // display when page is loaded
-getDogImg();
-getJoke();
+getCatImg();
+getFact();
