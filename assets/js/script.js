@@ -1,6 +1,8 @@
 var generateButton = document.querySelector("#generate");
 var displayEl = document.querySelector("#cat-img");
 var factEl = document.querySelector("#cat-fact");
+var favPhotoBtn = document.querySelector("#favorite-kitty")
+var favFactBtn = document.querySelector("#favorite-fact")
 
 // fetch to pull up random dog image
 var getCatImg = function (){
@@ -35,6 +37,7 @@ var getFact = function(){
 // display fact to page
 var displayFact = function(fact){
     var factText = document.createElement("p");
+    factText.setAttribute('id', 'fact')
     factText.textContent = fact;
     factEl.appendChild(factText);
 };
@@ -42,3 +45,43 @@ var displayFact = function(fact){
 // display when page is loaded
 getCatImg();
 getFact();
+
+
+var savePhoto = function(){
+    var savedPhotos = JSON.parse(localStorage.getItem('savedphotos'))
+
+    var photoURL = document.querySelector('#image')
+    photoURL = photoURL.getAttribute('src')
+
+    if (!savedPhotos || savedPhotos === 'null') {
+      savedPhotos = {
+            Url: [],
+        };
+        var imageURL = savedPhotos.Url
+        imageURL.push(photoURL)
+    }
+    else {
+        savedPhotos.Url.push(photoURL)
+    }
+    localStorage.setItem('savedphotos', JSON.stringify(savedPhotos))
+}
+
+var saveFact = function(){
+    var savedFacts = JSON.parse(localStorage.getItem('savedfacts'))
+
+    var factText = document.querySelector('#fact')
+    factText = factText.textContent
+
+    if (!savedFacts || savedFacts === 'null') {
+      savedFacts = {
+            Text: [],
+        };
+        savedFacts.Text.push(factText)
+    }
+    else {
+        savedFacts.Text.push(factText)
+    }
+    localStorage.setItem('savedfacts', JSON.stringify(savedFacts))
+}
+favPhotoBtn.addEventListener('click', savePhoto)
+favFactBtn.addEventListener('click', saveFact)
