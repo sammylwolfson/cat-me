@@ -4,6 +4,7 @@ var factEl = document.querySelector("#cat-fact");
 var favPhotoBtn = document.querySelector("#favorite-kitty")
 var favFactBtn = document.querySelector("#favorite-fact")
 var againBtn = document.querySelector("#again-btn")
+var favBtn = document.querySelector("#favorites")
 
 // fetch to pull up random dog image
 var getCatImg = function (){
@@ -62,6 +63,12 @@ var savePhoto = function(){
         imageURL.push(photoURL)
     }
     else {
+        for(var j=0; j<savedPhotos.Url.length; j++) {
+            if (photoURL === savedPhotos.Url[j]) {
+                console.log('this is a duplicate photo')
+                return;
+            }
+        }
         savedPhotos.Url.push(photoURL)
     }
     localStorage.setItem('savedphotos', JSON.stringify(savedPhotos))
@@ -80,6 +87,12 @@ var saveFact = function(){
         savedFacts.Text.push(factText)
     }
     else {
+        for(var j=0; j<savedFacts.Text.length; j++) {
+            if (factText === savedFacts.Text[j]) {
+                console.log('this is a duplicate fact')
+                return;
+            }
+        }
         savedFacts.Text.push(factText)
     }
     localStorage.setItem('savedfacts', JSON.stringify(savedFacts))
@@ -88,4 +101,7 @@ favPhotoBtn.addEventListener('click', savePhoto)
 favFactBtn.addEventListener('click', saveFact)
 againBtn.addEventListener('click', function(){
     location.reload();
+})
+favBtn.addEventListener('click', function(){
+    document.location.replace('./favorites.html')
 })

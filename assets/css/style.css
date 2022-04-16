@@ -45,3 +45,17 @@ body {
     padding: 50px;
 }
 
+
+.fav-imgs {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: auto;
+    height: 15rem;
+}
+
+.facts {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: auto;
+    font-size: 20px;
+}
