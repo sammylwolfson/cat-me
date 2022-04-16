@@ -16,7 +16,7 @@ function getFacts(){
     var savedFacts = JSON.parse(localStorage.getItem('savedfacts'))
         for (var i=0; i<savedFacts.Text.length; i++) {
             var factText = document.createElement("p");
-            factText.setAttribute('class', 'facts')
+            factText.setAttribute('class', 'facts primary callout')
             factText.textContent = savedFacts.Text[i];
             factEl.appendChild(factText);
         }
