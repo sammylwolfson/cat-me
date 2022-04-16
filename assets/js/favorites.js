@@ -7,7 +7,7 @@ var favoritePhotos = JSON.parse(localStorage.getItem('savedphotos'))
     for (var i=0; i<favoritePhotos.Url.length; i++) {
         var image = document.createElement("img");
         image.setAttribute("src", favoritePhotos.Url[i]);
-        image.setAttribute('class', 'fav-imgs')
+        image.setAttribute('class', 'fav-imgs');
         displayEl.appendChild(image);
     }
 };
