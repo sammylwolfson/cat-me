@@ -23,9 +23,3 @@ function getFacts(){
     };
 getPhotos()
 getFacts()
-
-var removeFact = function(event) {
-    console.log(this)
-}
-
-factEl.addEventListener('click', removeFact)
