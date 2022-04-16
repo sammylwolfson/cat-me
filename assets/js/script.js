@@ -62,6 +62,12 @@ var savePhoto = function(){
         imageURL.push(photoURL)
     }
     else {
+        for(var j=0; j<savedPhotos.Url.length; j++) {
+            if (photoURL === savedPhotos.Url[j]) {
+                console.log('this is a duplicate photo')
+                return;
+            }
+        }
         savedPhotos.Url.push(photoURL)
     }
     localStorage.setItem('savedphotos', JSON.stringify(savedPhotos))
@@ -80,6 +86,12 @@ var saveFact = function(){
         savedFacts.Text.push(factText)
     }
     else {
+        for(var j=0; j<savedFacts.Text.length; j++) {
+            if (factText === savedFacts.Text[j]) {
+                console.log('this is a duplicate fact')
+                return;
+            }
+        }
         savedFacts.Text.push(factText)
     }
     localStorage.setItem('savedfacts', JSON.stringify(savedFacts))
