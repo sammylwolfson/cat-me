@@ -6,51 +6,49 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/css/foundation.min.css" integrity="sha512-TgmH0v8FUwmsr3yDgd5PTCgR6lRZ2Q5c7KsUNTHcoxZpOExCX16MYECIL4xdRQOhQlz7pCnZlmA4zda58QWxBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <title>Cat</title>
+    <title>Cat Me</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/free-cat-icon-2.jpg">
 
 </head>
 
 <body>
-    <hr />
-                <!-- Grid Example -->
-            <div class="grid-x grid-padding-x">
-                <div class="large-12 cell">
-                    <div class="primary callout">
-                        <p><strong>Please enjoy this random photo and fact of cats.</strong></p>
-                    </div>
+    <header>
+        <a href="./index.html">
+            <h2 class="text-center">CAT ME</h2>
+        </a>
+        <p class="text-center">enjoy.</p>
+    </header>
+
+    <div class="grid-container fluid">
+        <!--image +fact container-->
+        <div class="grid-x grid-padding-x align-spaced">
+            <!--image + favorite container-->
+            <div class="grid-x grid-padding-x cell small-10 medium-5 align-center">
+                <div class="cell main-bg">
+                    <div id="cat-img"></div>
                 </div>
+                <!--favorite image btn-->
+                <button class="secondary-btn cell small-10 medium-6" id="favorite-kitty">ADD TO FAVORITES</button>
             </div>
-            <div class="grid-x grid-padding-x">
-                <div class="large-6 medium-6 cell">
-                    <div id="cat-img" class="primary callout">
-                    </div>
+            <!--fact + favorite container-->
+            <div class="grid-x grid-padding-x cell small-10 medium-5 align-center">
+                <div class="cell main-bg text-center">
+                    <div id="cat-fact"></div>
                 </div>
-                <div class="large-6 medium-6 cell">
-                    <div id="cat-fact" class="primary callout">
-                    </div>
-                </div>
+                <!--favorite fact button-->
+                <button class="secondary-btn cell small-10 medium-6" id="favorite-fact">ADD TO FAVORITES</button>
             </div>
-            <div class="grid-x grid-padding-x">
-                <div class="large-6 medium-6 cell">
-                    <button class="button cell" id="favorite-kitty">Add to Favorite Photos</button>
-                </div>
-                <div class="large-6 medium-6 cell">
-                    <button class="button cell small-6" id="favorite-fact">Add to Favorite Facts</button>
-                </div>
-                <div id="favorites" class="button primary callout cell">
-                    <p class="text-center">Favorites</p>
-                </div>
-            </div>
-            <div class="grid-x grid-margin-x align-center">
-                <div class="button flex-child-auto medium-2 large-2 cell">
-                    <a class="button flex-child-auto medium-2 large-2 cell" id="home-btn" href="./index.html">Home</a>
-                </div>
-                <div class="button flex-child-auto medium-2 large-2 cell">
-                    <a class="button flex-child-auto medium-2 large-2 cell" id="again-btn">See another?</a>
-                </div>
-            </div>
+        </div>
+        <div class="grid-x grid-margin-x align-center">
+            <button id="again-btn" class="secondary-btn cell small-6 medium-3">CAT ME AGAIN</button>
+        </div>
+        <div class="grid-x grid-margin-x align-center">
+            <button id="favorites" class="secondary-btn cell small-6 medium-3">GO TO FAVORITES</button>
         </div>
     </div>
     <script src="./assets/js/script.js"></script>
