@@ -5,9 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/css/foundation.min.css" integrity="sha512-TgmH0v8FUwmsr3yDgd5PTCgR6lRZ2Q5c7KsUNTHcoxZpOExCX16MYECIL4xdRQOhQlz7pCnZlmA4zda58QWxBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/css/foundation.min.css" integrity="sha512-TgmH0v8FUwmsr3yDgd5PTCgR6lRZ2Q5c7KsUNTHcoxZpOExCX16MYECIL4xdRQOhQlz7pCnZlmA4zda58QWxBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <title>Cat</title>
@@ -15,23 +17,22 @@
 </head>
 
 <body>
-    <hr />
-    <div class="grid-x grid-padding-x align-center">
-        <div class="cell small-8 medium-5 large-4">
-            <a class="button large" id="cat-me-btn" href="./second-page.html">Cat Me</a> 
-        </div>
-    </div>
-        <!-- Grid Example -->
+    <header>
+        <a href="./index.html">
+            <h2 class="text-center">CAT ME</h2>
+        </a>
+    </header>
+    <!-- Grid Example -->
     <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
-            <div class="primary callout">
-                <p><strong>Here will be your favorited photos and facts.</strong></p>
+            <div class="fav-img primary callout">
+                <p><strong>Click on a fact or photo to manage your favorites</strong></p>
             </div>
         </div>
     </div>
     <div class="grid-x grid-padding-x">
         <div class="large-6 medium-6 cell">
-            <div id="fav-img" class="primary callout"></div>
+            <div id="fav-img" class="fav-img primary callout"></div>
         </div>
         <div class="large-6 medium-6 cell">
             <div id="cat-facts"></div>
@@ -40,30 +41,31 @@
     <div id="photo-modal" class="modal">
         <div class="modal-content success callout">
             <span class="close">&times;</span>
-                <div class="grid-x grid-padding-x">
-                    <div class="cell medium-6">
-                        <h3>Delete Image</h3>
-                        <img id="delete-photo" class="svg clear success button" src="./assets/images/delete_black_48dp.svg" alt="">
-                    </div>
-                    <div class="cell medium-6">
-                        <h3>Open Image In Full</h3>
-                        <img id="open" class="svg clear callout button" src="./assets/images/open_in_full_black_48dp.svg" alt="">
-                    </div>
+            <div class="grid-x grid-padding-x">
+                <div class="cell medium-6">
+                    <h3>Delete Image</h3>
+                    <img id="delete-photo" class="svg clear success button" src="./assets/images/delete_black_48dp.svg" alt="">
                 </div>
+                <div class="cell medium-6">
+                    <h3>Open Image In Full</h3>
+                    <img id="open" class="svg clear callout button" src="./assets/images/open_in_full_black_48dp.svg" alt="">
+                </div>
+            </div>
         </div>
     </div>
     <div id="fact-modal" class="modal">
         <div class="modal-content success callout">
             <span class="close">&times;</span>
-                <div class="grid-x grid-padding-x">
-                    <div class="cell">
-                        <h3>Delete Fact</h3>
-                        <img id="delete-fact" class="svg clear success button" src="./assets/images/delete_black_48dp.svg" alt="">
-                    </div>
+            <div class="grid-x grid-padding-x">
+                <div class="cell">
+                    <h3>Delete Fact</h3>
+                    <img id="delete-fact" class="svg clear success button" src="./assets/images/delete_black_48dp.svg" alt="">
                 </div>
+            </div>
         </div>
     </div>
 
     <script src="./assets/js/favorites.js"></script>
 </body>
+
 </html>
