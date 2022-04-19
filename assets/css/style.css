@@ -34,6 +34,7 @@ h2 {
     text-shadow: 3px 3px #00d0ff;
     border: solid #00d0ff;
 }
+
 #cat-me-btn:hover {
     background-image: linear-gradient(to left, #af39d3, #fa0ec3);
     box-shadow: 10px 10px #00acd3;
