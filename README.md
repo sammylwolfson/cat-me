@@ -1,6 +1,6 @@
 # Cat Me
 
-![Screenshot (26)](./assets/images/Screenshot%20(29).png)
+![Screenshot (26)](./assets/images/Screenshot%20(35).png)
 
 ## User Story
 AS A cat lover

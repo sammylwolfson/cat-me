@@ -1,3 +1,10 @@
+body {
+    background: none;
+    background-image: url('./bg-img/page-bg.jpg');
+    background-position: 0px;
+    background-size: fill;
+}
+
 header {
     padding-bottom: 10px;
 }
@@ -34,6 +41,7 @@ h4 {
     width: 100%;
     height: 70px;
     margin-top: 30px;
+
     background-image: linear-gradient(to right, #af39d3, #fa0ec3);
     font-family: 'Fredoka One', cursive;
     font-size: 2rem;
