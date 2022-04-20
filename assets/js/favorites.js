@@ -25,9 +25,9 @@ function getRandomFav() {
     var factsIndex = Math.floor(Math.random() * favoriteFacts.Text.length);
     var randomFacts = document.createElement("p");
     randomPhoto.setAttribute("src", favoritePhotos.Url[getRandomIndex]);
-    randomPhoto.setAttribute('class', 'modal-imgs cell small-5');
+    randomPhoto.setAttribute('class', 'modal-imgs cell medium-5');
     randomPhotoFactEl.appendChild(randomPhoto);
-    randomFacts.setAttribute('class', 'modal-facts cell small-5')
+    randomFacts.setAttribute('class', 'modal-facts cell medium-5')
     randomFacts.textContent = favoriteFacts.Text[factsIndex];
     randomPhotoFactEl.appendChild(randomFacts);
     }
