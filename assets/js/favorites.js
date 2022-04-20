@@ -7,6 +7,34 @@ var span1 = document.getElementsByClassName("close")[1];
 var deleteBtn = document.querySelector('#delete-photo')
 var deleteFactBtn = document.querySelector('#delete-fact')
 var openFullBtn = document.querySelector("#open")
+var randomPhotoFactEl = document.querySelector("#random-photo")
+var favRandomButton = document.querySelector("#favorite-random")
+
+var clearElement = function(parent){
+    while(parent.firstChild){
+        parent.removeChild(parent.firstChild);
+    };
+};
+
+function getRandomFav() {
+    var favoritePhotos = JSON.parse(localStorage.getItem('savedphotos'));
+    var getRandomIndex = Math.floor(Math.random() * favoritePhotos.Url.length);
+    var randomPhoto = document.createElement("img");
+    var favoriteFacts = JSON.parse(localStorage.getItem('savedfacts'));
+    var factsIndex = Math.floor(Math.random() * favoriteFacts.Text.length);
+    var randomFacts = document.createElement("p");
+    randomPhoto.setAttribute("src", favoritePhotos.Url[getRandomIndex]);
+    randomPhotoFactEl.appendChild(randomPhoto);
+    randomFacts.textContent = favoriteFacts.Text[factsIndex];
+    randomPhotoFactEl.appendChild(randomFacts);
+    }
+
+favRandomButton.addEventListener('click', function() {
+   clearElement(randomPhotoFactEl);
+    getRandomFav();
+})
+console.log("testB")
+
 
 function getPhotos() {
     var favoritePhotos = JSON.parse(localStorage.getItem('savedphotos'))
@@ -14,8 +42,6 @@ function getPhotos() {
         var image = document.createElement("img");
         image.setAttribute("src", favoritePhotos.Url[i]);
         image.setAttribute('class', 'fav-imgs');
-
-
         displayEl.appendChild(image);
     }
 };
