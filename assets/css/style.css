@@ -12,8 +12,8 @@ h2 {
 h4 {
     font-family: 'Fredoka One', cursive;
     font-size: 20px;
-    color: #000;
     margin-bottom: 0;
+    padding-top: 15px;
 }
 
 .main-bg {
@@ -21,7 +21,7 @@ h4 {
     background-image: linear-gradient(to right, #af39d3, #fa0ec3);
     box-shadow: 10px 10px #00d0ff;
     border: solid #00d0ff;
-    overflow: scroll;
+    overflow: auto;
 }
 
 #index-container {
@@ -94,11 +94,23 @@ h4 {
     font-size: 25px;
     font-family: 'Fredoka One', cursive;
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-#again-btn:hover {
+/* #fav-again-btn a{
+
+} */
+
+#again-btn:hover, #fav-again-btn:hover {
     background-color: #ffdb0c;
     box-shadow: 0 0 40px rgb(255, 219, 12, 0.75);
+    color: #ffffff;
+}
+
+#favorite-random {
+    height: 80px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
 }
 
 .fav-imgs {
@@ -139,6 +151,7 @@ h4 {
     margin-right: 20px;
     width: auto;
     font-size: 20px;
+    color: #ffffff;
 }
 
 .modal {
@@ -162,6 +175,7 @@ h4 {
     margin: auto;
     padding-left: 10px;
     border: 1px solid #888;
+    border-radius: 15px;
     width: 40%;
 }
 
@@ -177,6 +191,31 @@ h4 {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.modal-imgs {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border: 10px solid #ffffff;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 50%);
+    justify-content: center;
+    align-content: center;
+}
+
+.modal-facts {
+    color: #ffffff;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size:  25px;
+    padding: 50px;
+    overflow: auto;
+    
+}
+
+#random-photo {
+    width: 60%;
 }
 
 .db {

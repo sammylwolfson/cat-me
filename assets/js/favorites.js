@@ -5,10 +5,11 @@ var factModal = document.querySelector('#fact-modal')
 var span = document.getElementsByClassName("close")[0];
 var span1 = document.getElementsByClassName("close")[1];
 var deleteBtn = document.querySelector('#delete-photo')
-var deleteFactBtn = document.querySelector('#delete-fact')
-var openFullBtn = document.querySelector("#open")
-var randomPhotoFactEl = document.querySelector("#random-photo")
-var favRandomButton = document.querySelector("#favorite-random")
+var deleteFactBtn = document.querySelector('#delete-fact');
+var openFullBtn = document.querySelector("#open");
+var randomPhotoFactEl = document.querySelector("#random-photo");
+var favRandomButton = document.querySelector("#favorite-random");
+var randomModal = document.querySelector("#random-modal");
 
 var clearElement = function(parent){
     while(parent.firstChild){
@@ -24,17 +25,18 @@ function getRandomFav() {
     var factsIndex = Math.floor(Math.random() * favoriteFacts.Text.length);
     var randomFacts = document.createElement("p");
     randomPhoto.setAttribute("src", favoritePhotos.Url[getRandomIndex]);
+    randomPhoto.setAttribute('class', 'modal-imgs cell medium-5');
     randomPhotoFactEl.appendChild(randomPhoto);
+    randomFacts.setAttribute('class', 'modal-facts cell medium-5')
     randomFacts.textContent = favoriteFacts.Text[factsIndex];
     randomPhotoFactEl.appendChild(randomFacts);
     }
 
 favRandomButton.addEventListener('click', function() {
-   clearElement(randomPhotoFactEl);
+    randomModal.style.display = "block";
+    clearElement(randomPhotoFactEl);
     getRandomFav();
 })
-console.log("testB")
-
 
 function getPhotos() {
     var favoritePhotos = JSON.parse(localStorage.getItem('savedphotos'))
@@ -115,8 +117,9 @@ span1.onclick = function() {
     factModal.style.display = "none";
 }
 window.onclick = function(event) {
-    if (event.target == photoModal || event.target == factModal) {
+    if (event.target == photoModal || event.target == factModal || event.target == randomModal) {
         photoModal.style.display = "none";
         factModal.style.display = "none";
+        randomModal.style.display = "none";
     }
 }
