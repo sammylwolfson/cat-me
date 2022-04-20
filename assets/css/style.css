@@ -9,6 +9,13 @@ h2 {
     margin-bottom: 0;
 }
 
+h4 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 0;
+}
+
 .main-bg {
     border-radius: 15px;
     background-image: linear-gradient(to right, #af39d3, #fa0ec3);
@@ -153,15 +160,17 @@ h2 {
     overflow: auto;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
+    align-content: center;
+    font-family: 'Fredoka One', cursive;
 }
 
 .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    padding-left: 10px;
     border: 1px solid #888;
-    width: 80%;
     border-radius: 15px;
+    width: 40%;
 }
 
 .close {

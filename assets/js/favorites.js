@@ -108,10 +108,12 @@ factEl.addEventListener('click', DisplayFactModal)
 deleteBtn.addEventListener('click', removePhoto)
 deleteFactBtn.addEventListener('click', removeFact)
 openFullBtn.addEventListener('click', openImg)
+
 span.onclick = function() {
     photoModal.style.display = "none";
 }
 span1.onclick = function() {
+    console.log("fart")
     factModal.style.display = "none";
 }
 window.onclick = function(event) {
