@@ -6,6 +6,7 @@ var favFactBtn = document.querySelector("#favorite-fact")
 var againBtn = document.querySelector("#again-btn")
 var favBtn = document.querySelector("#favorites")
 
+
 // fetch to pull up random dog image
 var getCatImg = function (){
     fetch("https://api.thecatapi.com/v1/images/search")

@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/css/foundation.min.css" integrity="sha512-TgmH0v8FUwmsr3yDgd5PTCgR6lRZ2Q5c7KsUNTHcoxZpOExCX16MYECIL4xdRQOhQlz7pCnZlmA4zda58QWxBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/css/foundation.min.css"
+        integrity="sha512-TgmH0v8FUwmsr3yDgd5PTCgR6lRZ2Q5c7KsUNTHcoxZpOExCX16MYECIL4xdRQOhQlz7pCnZlmA4zda58QWxBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,10 +26,15 @@
     <!-- Grid Example -->
     <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
-            <div class="fav-img primary callout">
-                <p><strong>Click on a fact or photo to manage your favorites</strong></p>
-            </div>
+        <button class="button large" id="favorite-random">Click For Random Favorite Cat and Quote</button>
+    </div>
+    <!--favorite image btn-->
+    </div>
+    <div class="large-12 cell">
+        <div class="fav-img primary callout">
+            <p><strong>Click on a fact or photo to manage your favorites</strong></p>
         </div>
+    </div>
     </div>
     <div class="grid-x grid-padding-x">
         <div class="large-6 medium-6 cell">
@@ -44,11 +50,13 @@
             <div class="grid-x grid-padding-x">
                 <div class="cell medium-6">
                     <h3>Delete Image</h3>
-                    <img id="delete-photo" class="svg clear success button" src="./assets/images/delete_black_48dp.svg" alt="">
+                    <img id="delete-photo" class="svg clear success button" src="./assets/images/delete_black_48dp.svg"
+                        alt="">
                 </div>
                 <div class="cell medium-6">
                     <h3>Open Image In Full</h3>
-                    <img id="open" class="svg clear callout button" src="./assets/images/open_in_full_black_48dp.svg" alt="">
+                    <img id="open" class="svg clear callout button" src="./assets/images/open_in_full_black_48dp.svg"
+                        alt="">
                 </div>
             </div>
         </div>
@@ -59,12 +67,14 @@
             <div class="grid-x grid-padding-x">
                 <div class="cell">
                     <h3>Delete Fact</h3>
-                    <img id="delete-fact" class="svg clear success button" src="./assets/images/delete_black_48dp.svg" alt="">
+                    <img id="delete-fact" class="svg clear success button" src="./assets/images/delete_black_48dp.svg"
+                        alt="">
                 </div>
             </div>
         </div>
     </div>
-
+    <div id="random-photo">
+    </div>
     <script src="./assets/js/favorites.js"></script>
 </body>
 
