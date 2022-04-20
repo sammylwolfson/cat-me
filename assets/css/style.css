@@ -14,7 +14,7 @@ h2 {
     background-image: linear-gradient(to right, #af39d3, #fa0ec3);
     box-shadow: 10px 10px #00d0ff;
     border: solid #00d0ff;
-    overflow: scroll;
+    overflow: auto;
 }
 
 #index-container {
@@ -138,6 +138,7 @@ h2 {
     margin-right: 20px;
     width: auto;
     font-size: 20px;
+    color: #ffffff;
 }
 
 .modal {
@@ -160,6 +161,7 @@ h2 {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    border-radius: 15px;
 }
 
 .close {
@@ -174,6 +176,27 @@ h2 {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.modal-imgs {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border: 10px solid #ffffff;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 50%);
+    justify-content: center;
+    align-content: center;
+}
+
+.modal-facts {
+    color: #ffffff;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.5rem;
+    padding: 50px;
+    overflow: auto;
+
 }
 
 .db {
