@@ -12,8 +12,8 @@ h2 {
 h4 {
     font-family: 'Fredoka One', cursive;
     font-size: 20px;
-    color: #000;
     margin-bottom: 0;
+    padding-top: 15px;
 }
 
 .main-bg {
@@ -94,11 +94,17 @@ h4 {
     font-size: 25px;
     font-family: 'Fredoka One', cursive;
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-#again-btn:hover {
+/* #fav-again-btn a{
+
+} */
+
+#again-btn:hover, #fav-again-btn:hover {
     background-color: #ffdb0c;
     box-shadow: 0 0 40px rgb(255, 219, 12, 0.75);
+    color: #ffffff;
 }
 
 #favorite-random {
@@ -202,10 +208,14 @@ h4 {
     display: flex;
     justify-content: center;
     align-content: center;
-    font-size: 1.5rem;
+    font-size:  25px;
     padding: 50px;
     overflow: auto;
+    
+}
 
+#random-photo {
+    width: 60%;
 }
 
 .db {
