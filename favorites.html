@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/css/foundation.min.css"
+        integrity="sha512-TgmH0v8FUwmsr3yDgd5PTCgR6lRZ2Q5c7KsUNTHcoxZpOExCX16MYECIL4xdRQOhQlz7pCnZlmA4zda58QWxBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Cat Me</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/free-cat-icon-2.jpg">
+</head>
+
+<body>
+    <header>
+        <a href="./index.html">
+            <h2 class="text-center">CAT ME</h2>
+        </a>
+        <p class="text-center">enjoy.</p>
+    </header>
+    <div class="grid-x grid-padding-x align-spaced">
+        <button class="cell small-5 secondary-btn" id="favorite-random">Click For Random Favorite Cat and Quote</button>
+        <a id="fav-again-btn"class="cell small-5 secondary-btn" href="./second-page.html">
+            <h4 class="text-center">CAT ME AGAIN</h4>
+        </a>
+    </div>
+    <div class="large-12 cell">
+        <div class="fav-img primary callout">
+            <p><strong>Click on a fact or photo to manage your favorites</strong></p>
+        </div>
+    </div>
+    </div>
+    <div class="grid-x grid-padding-x">
+        <div class="large-7 medium-6 cell">
+            <div id="fav-img" class="fav-img primary callout"></div>
+        </div>
+        <div class="large-5 medium-6 cell">
+            <div id="cat-facts"></div>
+        </div>
+    </div>
+    <div id="photo-modal" class="modal">
+        <div class="modal-content success callout">
+            <span class="close">&times;</span>
+            <div class="grid-x grid-padding-x">
+                <div class="cell medium-6">
+                    <h3>Delete Image</h3>
+                    <img id="delete-photo" class="svg clear success button" src="./assets/images/delete_black_48dp.svg"
+                        alt="">
+                </div>
+                <div class="cell medium-6">
+                    <h3>Open Image In Full</h3>
+                    <img id="open" class="svg clear callout button" src="./assets/images/open_in_full_black_48dp.svg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fact-modal" class="modal">
+        <div class="modal-content success callout">
+            <span class="close">&times;</span>
+            <div class="grid-x grid-padding-x">
+                <div class="cell medium-6">
+                    <h3>Delete Fact</h3>
+
+                    <img id="delete-fact" class="svg clear success button " src="./assets/images/delete_black_48dp.svg " alt=" ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="random-modal" class="modal">
+        <div id="random-photo" class="main-bg modal-content success callout grid-x align-spaced">
+        </div>
+    </div>
+
+    <script src="./assets/js/favorites.js"></script>
+</body>
+
+</html>

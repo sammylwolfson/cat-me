@@ -1,0 +1,241 @@
+body {
+    background: none;
+    background-image: url('./bg-img/page-bg.jpg');
+    background-position: 0px;
+    background-size: fill;
+}
+
+header {
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 60px;
+    color: #000;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    margin-bottom: 0;
+    padding-top: 15px;
+}
+
+.main-bg {
+    border-radius: 15px;
+    background-image: linear-gradient(to right, #af39d3, #fa0ec3);
+    box-shadow: 10px 10px #00d0ff;
+    border: solid #00d0ff;
+    overflow: auto;
+}
+
+#index-container {
+    padding-top: 175px;
+}
+
+#cat-me-btn {
+    padding: 15px;
+    border-radius: 15px;
+    width: 100%;
+    height: 70px;
+    margin-top: 30px;
+
+    background-image: linear-gradient(to right, #af39d3, #fa0ec3);
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    box-shadow: 10px 10px #00d0ff;
+    text-shadow: 3px 3px #00d0ff;
+    border: solid #00d0ff;
+}
+
+#cat-me-btn:hover {
+    background-image: linear-gradient(to left, #af39d3, #fa0ec3);
+    box-shadow: 10px 10px #00acd3;
+    text-shadow: 3px 3px #00acd3;
+    border: solid #00acd3;
+}
+
+#cat-img {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 1rem;
+}
+
+#cat-img img {
+    border: 10px solid #ffffff;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 50%);
+}
+
+#cat-fact {
+    color: #ffffff;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#cat-fact p {
+    font-size: 1.5rem;
+    padding: 50px;
+}
+
+.secondary-btn {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #00d0ff;
+    color: #ffffff
+}
+
+.secondary-btn:hover {
+    background-color: #00acd3;
+}
+
+#again-btn {
+    height: 80px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Fredoka One', cursive;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* #fav-again-btn a{
+
+} */
+
+#again-btn:hover, #fav-again-btn:hover {
+    background-color: #ffdb0c;
+    box-shadow: 0 0 40px rgb(255, 219, 12, 0.75);
+    color: #ffffff;
+}
+
+#favorite-random {
+    height: 80px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+}
+
+.fav-imgs {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: auto;
+    height: 15rem;
+    border: 10px solid #ffffff;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 50%);
+    justify-content: center;
+    align-content: center;
+}
+
+.fav-img.primary.callout {
+    border-radius: 15px;
+    background-image: linear-gradient(to right, #af39d3, #fa0ec3);
+    box-shadow: 10px 10px #00d0ff;
+    border: solid #00d0ff;
+}
+
+.fav-img.facts {
+    color: #ffffff;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.fav-img p {
+    color: #ffffff;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+
+.facts {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: auto;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    align-content: center;
+    font-family: 'Fredoka One', cursive;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding-left: 10px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 40%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-imgs {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border: 10px solid #ffffff;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 50%);
+    justify-content: center;
+    align-content: center;
+}
+
+.modal-facts {
+    color: #ffffff;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size:  25px;
+    padding: 50px;
+    overflow: auto;
+    
+}
+
+#random-photo {
+    width: 60%;
+}
+
+.db {
+    display: block;
+}
+
+.svg {
+    margin-left: 4rem;
+}
+
+@media screen and (max-width: 640px) {
+    .svg {
+        margin-left: 1.8rem;
+    }
+}
