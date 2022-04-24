@@ -2,6 +2,9 @@
 
 ![Screenshot (26)](./assets/images/Screenshot%20(35).png)
 
+## Description
+Cat Me is an application that allows users to get photos and facts about cats. Users also have the ability to favorite and save photos and/or facts to their local storage. Lastly, users can delete photos or facts, as well as display images in full screen.
+
 ## User Story
 AS A cat lover
 I WANT TO be able to generate a picture or cat along with a fact about a cat
