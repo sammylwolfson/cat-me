@@ -39,7 +39,7 @@ favRandomButton.addEventListener('click', function() {
     if (!savedFacts || !favoritePhotos) {
         return;
     }
-    else if (savedFacts.text > 2 && favoritePhotos.Url > 2) {
+    else if (savedFacts.text.length > 2 && favoritePhotos.Url.length > 2) {
         randomModal.style.display = "block";
         clearElement(randomPhotoFactEl);
         getRandomFav();
