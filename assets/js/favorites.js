@@ -33,9 +33,20 @@ function getRandomFav() {
     }
 
 favRandomButton.addEventListener('click', function() {
-    randomModal.style.display = "block";
-    clearElement(randomPhotoFactEl);
-    getRandomFav();
+    var favoritePhotos = JSON.parse(localStorage.getItem('savedphotos'))
+    var savedFacts = JSON.parse(localStorage.getItem('savedfacts'))
+
+    if (!savedFacts || !favoritePhotos) {
+        return;
+    }
+    else if (savedFacts.text > 2 && favoritePhotos.Url > 2) {
+        randomModal.style.display = "block";
+        clearElement(randomPhotoFactEl);
+        getRandomFav();
+    }
+    else {
+        console.log('Not enough favorited information')
+    }
 })
 
 function getPhotos() {
