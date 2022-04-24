@@ -23,7 +23,7 @@ WHEN I favorite a fact THEN the fact is saved.
 * api.thecatapi.com/v1/images/search(API)
 
 ## Deployed Website
-https://sammylwolfson.github.io/dog-me/
+https://sammylwolfson.github.io/cat-me/
 
 ## Contributors
 * Joel Abankwah
