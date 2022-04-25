@@ -32,41 +32,59 @@ function getRandomFav() {
     randomPhotoFactEl.appendChild(randomFacts);
     }
 
+var notEnoughFav = function() {
+    var errorMessage =document.createElement("p");
+    errorMessage.textContent = " Please add at least 1 photo and 1 facts to favorites"
+    randomPhotoFactEl.appendChild(errorMessage);
+}
+
 favRandomButton.addEventListener('click', function() {
     var favoritePhotos = JSON.parse(localStorage.getItem('savedphotos'))
     var savedFacts = JSON.parse(localStorage.getItem('savedfacts'))
 
+
+    randomModal.style.display = "block";
+
+
     if (!savedFacts || !favoritePhotos) {
-        return;
+        clearElement(randomPhotoFactEl);
+        notEnoughFav();
     }
-    else if (savedFacts.text.length > 2 && favoritePhotos.Url.length > 2) {
-        randomModal.style.display = "block";
+    else {
         clearElement(randomPhotoFactEl);
         getRandomFav();
     }
-    else {
-        console.log('Not enough favorited information')
-    }
+
 })
 
 function getPhotos() {
     var favoritePhotos = JSON.parse(localStorage.getItem('savedphotos'))
-    for (var i = 0; i < favoritePhotos.Url.length; i++) {
-        var image = document.createElement("img");
-        image.setAttribute("src", favoritePhotos.Url[i]);
-        image.setAttribute('class', 'fav-imgs');
-        displayEl.appendChild(image);
-    }
+
+    if (!favoritePhotos){
+        return;
+    } else {
+        for (var i = 0; i < favoritePhotos.Url.length; i++) {
+            var image = document.createElement("img");
+            image.setAttribute("src", favoritePhotos.Url[i]);
+            image.setAttribute('class', 'fav-imgs');
+            displayEl.appendChild(image);
+        }
+    };
 };
 
 function getFacts() {
     var savedFacts = JSON.parse(localStorage.getItem('savedfacts'))
-    for (var i = 0; i < savedFacts.Text.length; i++) {
-        var factText = document.createElement("p");
-        factText.setAttribute('class', 'fav-img facts primary callout')
-        factText.textContent = savedFacts.Text[i];
-        factEl.appendChild(factText);
-    }
+
+    if(!savedFacts) {
+        return;
+    } else {
+        for (var i = 0; i < savedFacts.Text.length; i++) {
+            var factText = document.createElement("p");
+            factText.setAttribute('class', 'fav-img facts primary callout')
+            factText.textContent = savedFacts.Text[i];
+            factEl.appendChild(factText);
+        }
+    };
 };
 getPhotos()
 getFacts()
